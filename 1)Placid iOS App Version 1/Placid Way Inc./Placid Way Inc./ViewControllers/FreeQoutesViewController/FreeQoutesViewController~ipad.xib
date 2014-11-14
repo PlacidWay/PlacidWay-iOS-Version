@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FreeQoutesViewController">
+            <connections>
+                <outlet property="btn_Country" destination="wa5-lw-ij3" id="hVm-Rd-QSy"/>
+                <outlet property="btn_Submit" destination="gCA-NJ-FhM" id="P17-mP-Mbo"/>
+                <outlet property="sv_scroll" destination="ZCy-J0-965" id="by4-v7-zRb"/>
+                <outlet property="tf_address" destination="vXG-Yc-ZL7" id="BDI-TO-N1o"/>
+                <outlet property="tf_city" destination="v7O-Mw-2bA" id="PDr-QL-xj1"/>
+                <outlet property="tf_country" destination="Iqx-xS-H0g" id="hd3-89-1fv"/>
+                <outlet property="tf_email" destination="dbo-nE-YVv" id="1so-D9-2o3"/>
+                <outlet property="tf_name" destination="AHC-MJ-ALS" id="NKG-F4-HQx"/>
+                <outlet property="tf_phone" destination="TQH-d6-cQP" id="3mh-ou-Mp0"/>
+                <outlet property="tf_subject" destination="otC-dB-F2g" id="0Yq-Jo-wTR"/>
+                <outlet property="tv_messsage" destination="eXd-KL-0QE" id="j1l-lZ-CHM"/>
+                <outlet property="view" destination="ujx-pl-2Qc" id="aVA-vK-kvJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ujx-pl-2Qc">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="SZj-gy-UCa">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="header_free_qoute_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="930-aZ-u7B">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="126"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="footer.png" translatesAutoresizingMaskIntoConstraints="NO" id="4yE-Qm-VcS">
+                    <rect key="frame" x="0.0" y="932" width="768" height="91"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCA-NJ-FhM">
+                    <rect key="frame" x="276" y="801" width="238" height="105"/>
+                    <state key="normal" image="send_btn.png"/>
+                    <connections>
+                        <action selector="gotosubmit" destination="-1" eventType="touchUpInside" id="ltS-No-7MP"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAD-qG-Sna">
+                    <rect key="frame" x="708" y="953" width="52" height="51"/>
+                    <state key="normal" image="back_icon.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="gotoback" destination="-1" eventType="touchUpInside" id="JMz-Pp-99l"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mkc-sl-6Bd">
+                    <rect key="frame" x="8" y="953" width="54" height="45"/>
+                    <state key="normal" image="home_icon.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="gotoHome:" destination="-1" eventType="touchUpInside" id="fdA-c3-RZw"/>
+                    </connections>
+                </button>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZCy-J0-965">
+                    <rect key="frame" x="76" y="168" width="616" height="567"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="text_bar_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rmg-cF-Wbk">
+                            <rect key="frame" x="8" y="17" width="602" height="60"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name*" minimumFontSize="17" background="text_bar.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="AHC-MJ-ALS">
+                            <rect key="frame" x="18" y="27" width="580" height="36"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="QnG-Cp-pk7"/>
+                            </connections>
+                        </textField>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="text_bar_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="5cG-zH-1fG">
+                            <rect key="frame" x="7" y="85" width="602" height="60"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email*" minimumFontSize="17" background="text_bar.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dbo-nE-YVv">
+                            <rect key="frame" x="19" y="97" width="580" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="6F9-jK-nor"/>
+                            </connections>
+                        </textField>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="text_bar_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="me0-ha-U3y">
+                            <rect key="frame" x="8" y="153" width="602" height="59"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone*" minimumFontSize="17" background="text_bar.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TQH-d6-cQP">
+                            <rect key="frame" x="19" y="165" width="580" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="YOq-I5-mA3"/>
+                            </connections>
+                        </textField>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="text_bar_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="zRa-No-QdI">
+                            <rect key="frame" x="8" y="220" width="602" height="60"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address*" minimumFontSize="17" background="text_bar.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vXG-Yc-ZL7">
+                            <rect key="frame" x="19" y="232" width="580" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="mmX-mB-dec"/>
+                            </connections>
+                        </textField>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="text_bar_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="E4Y-hq-r0i">
+                            <rect key="frame" x="8" y="288" width="602" height="60"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City*" minimumFontSize="17" background="text_bar.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="v7O-Mw-2bA">
+                            <rect key="frame" x="19" y="300" width="580" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="uYX-hO-Q9d"/>
+                            </connections>
+                        </textField>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="text_bar_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="0em-g1-uCW">
+                            <rect key="frame" x="7" y="356" width="602" height="60"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Country*" minimumFontSize="17" background="text_bar.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Iqx-xS-H0g">
+                            <rect key="frame" x="19" y="368" width="580" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="tJJ-Sc-dka"/>
+                            </connections>
+                        </textField>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="text_bar_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="b2A-gF-9hN">
+                            <rect key="frame" x="8" y="424" width="602" height="60"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Subject*" minimumFontSize="17" background="text_bar.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="otC-dB-F2g">
+                            <rect key="frame" x="19" y="436" width="580" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="i8j-Ki-eGK"/>
+                            </connections>
+                        </textField>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="text_bar_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="pcS-5r-zem">
+                            <rect key="frame" x="6" y="492" width="602" height="60"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wa5-lw-ij3">
+                            <rect key="frame" x="18" y="368" width="580" height="36"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <state key="normal">
+                                <color key="titleColor" red="0.91687260839999996" green="0.91687260839999996" blue="0.91687260839999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="showAllCountriesListView" destination="-1" eventType="touchUpInside" id="kAH-Cz-ctA"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Message*" minimumFontSize="17" background="text_bar.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eXd-KL-0QE">
+                            <rect key="frame" x="18" y="504" width="580" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="3CQ-Fz-1Ue"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="ERt-Xp-jzf"/>
+                    </connections>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back_icon.png" width="25" height="25"/>
+        <image name="background.png" width="320" height="480"/>
+        <image name="footer.png" width="320" height="43"/>
+        <image name="header_free_qoute_bg.png" width="320" height="59"/>
+        <image name="home_icon.png" width="26" height="22"/>
+        <image name="send_btn.png" width="132" height="49"/>
+        <image name="text_bar.png" width="287" height="48"/>
+        <image name="text_bar_2.png" width="289" height="58"/>
+    </resources>
+</document>
